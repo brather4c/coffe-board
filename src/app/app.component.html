@@ -1,0 +1,257 @@
+
+<!-- DYNAMIC BG -->
+
+<app-bg [ngClass]="{'show': bgType}" class="bord-bg"></app-bg>
+
+<!-- Logo -->
+
+<div class="logo">
+
+  <div class="logo-wrapp" [ngClass]="{'loaded': logoLoaded }">
+    <label class="logo-wrapp__file-label" for="filesLogo">LOGO 200x80</label>
+    <input type="file" id="filesLogo" class="logo-wrapp__file-input" (change)="uploadImage($event, uploadLogoImg, linkDownload)"/>
+    <img id="image" #uploadLogoImg/>
+    <a href="" #linkDownload></a>
+  </div>
+
+  <!-- Settings  -->
+
+   <div class="settings">
+    <div class="settings__button" [ngClass]="{'settings__button_open': showSettings}" (click)="toggleSettings()">
+      <img *ngIf="!showSettings" src="assets/icon/settings.svg" alt="">
+      <img *ngIf="showSettings" src="assets/icon/close.svg" alt="">
+    </div>
+    <div *ngIf="showSettings" class="settings__body">
+      <div class="settings__body-line">
+        <span>Static</span>
+        <span>
+            <div class="switch">
+              <input type="checkbox" name="toggle" id="toggle" 
+              [checked]="bgType" (change)="bgType = !bgType">
+              <label for="toggle"><i></i></label>
+            </div>
+        </span>
+        <span>Dinamic</span>
+      </div>
+      <div class="settings__body-line">
+          <span>Lang 1 (ENG)</span>
+          <span>
+            <div class="switch">
+              <input type="checkbox" [checked]="(Lang != 'Lang 1') ? true : false" name="LANG" (change)="changeLanguage($event)">
+              <label for="LANG"><i></i></label>
+            </div>
+          </span>
+        <span>Lang 2 (UKR)</span>
+      </div>
+      <div class="settings__body-line" style="margin-top: 10px; border-top: 1px solid #e1e1e1; padding-top: 20px;">
+        <span>Edit Mod</span>
+        <span>
+          <div class="switch">
+            <input type="checkbox" name="editModInp" id="editModInp" [checked]="editMod" (change)="editMod = !editMod">
+            <label for="editModInp" class="change-color"><i></i></label>
+          </div>
+        </span>
+        <span></span>
+      </div>
+      <div class="settings__body-line">
+        <span>Reset BORD's</span>
+        <span>
+          <div class="switch">
+            <input type="checkbox" name="resetBORD" id="resetBORD" 
+             (change)="resetBORD($event)">
+            <label for="resetBORD" class="change-color"><i></i></label>
+          </div>
+        </span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bord -->
+
+<div class="bord" [style.height.px]="winHeight * .95">
+
+  <div class="left-side"
+       [style.width.px]="(winWidth - rightColWidth) * .45" #leftSide>
+
+    <div class="bord-list-title">
+      <h3 class="title"></h3>
+      <div class="cap-line">
+            <span class="cap-line__item" [style.height.px]="lineHeight" [style.width.px]="lineHeight">
+              <span class="cap-line__item-wrapper cap_small">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="200" viewBox="0 0 417 391" id="Coffee" version="1.1">
+                  <defs>
+                    <path id="smoke" d="M72.1 80.9C72.1 71.5 70.3 61.5 79.1 57.4 91.4 51.8 116.1 46.5 108.6 34 94.6 10.5 105.4 1.5 99.8 0.2 92.4-1.6 79.1 11.3 79.1 15.5 79.1 26.3 96.4 36.4 89.1 40.1 81.7 43.9 54.1 40.5 58.5 57.4 62.9 74.3 72.1 103.2 72.1 80.9Z" fill="#A2B6BE"></path>
+                    <g id="Cup">
+                      <path d="M7 143L18 306C18.1 307.1 19 308 20.1 308L116.9 308C118 308 118.9 307.1 119 306L130 143Z" id="Cup-body" fill="#FFFFFF"></path>
+                      <path d="M18 306C18 307.1 18.9 308 20 308L117 308C118.1 308 119 307.1 119 306Z" id="Cup-base" fill="#DADADA"></path>
+                      <path d="M7 143L125 206 130 143Z" id="Cup-bodyUpperShadow" opacity="0.2" fill="#C8D8DE"></path>
+                      <path d="M14.3 252L15.2 265 123 252Z" id="Cup-bodyLowerShadow" opacity="0.2" fill="#C8D8DE"></path>
+                      <rect id="Cup-upperBorder" fill="#C3D4DB" x="0" y="120" width="138" height="24" rx="4"></rect>
+                      <path d="M4 120C1.8 120 0 121.8 0 124L0 140C0 142.2 1.8 144 4 144L134.9 144C135 144 137.2 143.5 135 142.8L63.2 121.2C61.1 120.5 57.6 120 55.4 120Z" id="Cup-upperBorderShadow" fill="#B7CCD5"></path>
+                      <path d="M9.9 191C7.5 191 6 192.8 6 195L9.4 250C9.5 252.2 11.4 254 13.6 254L122.4 254C124.6 254 126.5 252.2 126.6 250L129.9 195C130 192.8 128.3 191 126.1 191Z" id="Cup-lowerBorder" fill="#A2B6BE"></path>
+                      <path d="M9.9 191C7.5 191 6 192.8 6 195L9.4 250C9.5 252.2 11.4 254 13.6 254L122.4 254C124.6 254 124.7 253.4 124.6 252.8L41.9 193.3C40.1 192 36.8 191 34.6 191Z" id="Cup-lowerBorderShadow" fill="#98ACB5"></path>
+                      <rect id="Cup-bottleneck" fill="#FFFFFF" x="15" y="104" width="109" height="16"></rect>
+                      <path d="M57.5 97C55.6 97 53.4 98.4 52.6 100.2L51 104 91 104 89.9 100.3C89.3 98.5 87.3 97 85.3 97L57.5 97Z" id="Cup-bottleneckTip" fill="#F1F1F1"></path>
+                    </g>
+                  </defs>
+                  <g id="CoffeeCupSmaller" transform="translate(110, -150) scale(1.5)">
+                    <use id="CoffeeCup-smokeInverted" class="cup-smoke_small" xlink:href="#smoke" transform="translate(62 38) scale(-1 1) translate(-79 -48)"></use>
+                    <use xlink:href="#Cup"></use>
+                  </g>
+                </svg>
+                <span class="cap-size">150</span>
+              </span>
+            </span>
+        <span class="cap-line__item" [style.height.px]="lineHeight" [style.width.px]="lineHeight">
+              <span class="cap-line__item-wrapper cap_midle">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="200" viewBox="0 0 417 391" id="Coffee" version="1.1">
+                  <g class="coffee-cup" transform="translate(85, -220) scale(1.9)">
+                    <use class="cup-smoke_middle" xlink:href="#smoke" transform="translate(62 38) scale(-1 1) translate(-79 -48)"></use>
+                    <use xlink:href="#Cup"></use>
+                  </g>
+                </svg>
+                <span class="cap-size">250</span>
+              </span>
+            </span>
+        <span class="cap-line__item" [style.height.px]="lineHeight" [style.width.px]="lineHeight">
+              <span class="cap-line__item-wrapper cap_large">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="200" viewBox="0 0 417 391" id="Coffee" version="1.1">
+
+                  <g class="coffee-cup" transform="translate(45, -340) scale(2.4)">
+                    <use class="cup-smoke_large" xlink:href="#smoke" transform="translate(62 38) scale(-1 1) translate(-79 -48)"></use>
+                    <use xlink:href="#Cup"></use>
+                  </g>
+                </svg>
+                <span class="cap-size">350</span>
+              </span>
+            </span>
+      </div>
+    </div>
+
+    <ul class="bord-list">
+      <li class="bord-list__item" *ngFor="let item of config[Lang].leftSideList" [style.height.px]="lineHeight" #field>
+        <div class="name">
+          <input [disabled]="!editMod" type="text" value="{{ item.name }}" 
+          [style.height.px]="lineHeight" [style.width.px]="field.clientWidth - (lineHeight * 4) - 6" 
+          (change)="saveNewValue($event, item, i, 'leftSideList', 'name')" (click)="selectField($event)">
+        </div>
+        <div class="price">
+          <span class="price__item" *ngFor="let price of item.price; let i = index;" [style.height.px]="lineHeight" [style.width.px]="lineHeight">
+            <span class="price__item-wrapper">
+               <input type="text" value="{{ price }}" [style.height.px]="lineHeight" [style.width.px]="lineHeight" (change)="saveNewValue($event, item, i, 'leftSideList')"
+               (click)="selectField($event)">
+            </span>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="center-side" [style.width.px]="(winWidth - rightColWidth) * .5">
+
+    <div class="bord-list-title">
+      <h3 class="title">{{ config[Lang].centerListCapuchinoTitle }}</h3>
+      <div class="cap-line">
+            <span class="cap-line__item" [style.height.px]="lineHeight" [style.width.px]="lineHeight">
+              <span class="cap-line__item-wrapper cap_small">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="200" viewBox="0 0 417 391" id="Coffee" version="1.1">
+                  <g id="CoffeeCupSmaller" transform="translate(110, -150) scale(1.5)">
+                    <use class="cup-smoke_small-2" xlink:href="#smoke" transform="translate(62 38) scale(-1 1) translate(-79 -48)"></use>
+                    <use xlink:href="#Cup"></use>
+                  </g>
+                </svg>
+                <span class="cap-size">150</span>
+              </span>
+            </span>
+        <span class="cap-line__item" [style.height.px]="lineHeight" [style.width.px]="lineHeight">
+              <span class="cap-line__item-wrapper cap_midle">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="200" viewBox="0 0 417 391" id="Coffee" version="1.1">
+                  <g class="coffee-cup" transform="translate(85, -220) scale(1.9)">
+                    <use class="cup-smoke_middle-2" xlink:href="#smoke" transform="translate(62 38) scale(-1 1) translate(-79 -48)"></use>
+                    <use xlink:href="#Cup"></use>
+                  </g>
+                </svg>
+                <span class="cap-size">250</span>
+              </span>
+            </span>
+        <span class="cap-line__item" [style.height.px]="lineHeight" [style.width.px]="lineHeight">
+              <span class="cap-line__item-wrapper cap_large">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="200" viewBox="0 0 417 391" id="Coffee" version="1.1">
+
+                  <g class="coffee-cup" transform="translate(45, -340) scale(2.4)">
+                    <use class="cup-smoke_large-2" xlink:href="#smoke" transform="translate(62 38) scale(-1 1) translate(-79 -48)"></use>
+                    <use xlink:href="#Cup"></use>
+                  </g>
+                </svg>
+                <span class="cap-size">350</span>
+              </span>
+            </span>
+      </div>
+    </div>
+    <ul class="bord-list bord-list_bottom-border">
+      <li  class="bord-list__item" *ngFor="let item of config[Lang].centerListCapuchino" [style.height.px]="lineHeight" #field>
+        <div class="name">
+          <input type="text" value="{{ item.name }}" 
+          [style.height.px]="lineHeight" [style.width.px]="field.clientWidth - (lineHeight * 4) - 6" 
+          (change)="saveNewValue($event, item, i, 'centerListCapuchino', 'name')">
+        </div>
+        <div class="price">
+            <span class="price__item" *ngFor="let price of item.price; let i = index;" [style.height.px]="lineHeight" [style.width.px]="lineHeight">
+              <span class="price__item-wrapper">
+                 <input type="text" value="{{ price }}" [style.height.px]="lineHeight" [style.width.px]="lineHeight" (change)="saveNewValue($event, item, i, 'centerListCapuchino')">
+              </span>
+            </span>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Bord list -->
+
+    <div class="bord-list-title">
+      <h3 class="title">{{ config[Lang].centerListLateTitle }}</h3>
+    </div>
+    <ul class="bord-list bord-list_bottom-border">
+      <li  class="bord-list__item" *ngFor="let item of config[Lang].centerListLate" [style.height.px]="lineHeight" #field>
+        <div class="name">
+            <input type="text" value="{{ item.name }}" [style.height.px]="lineHeight" 
+            [style.width.px]="field.clientWidth - (lineHeight * 4) - 6" (change)="saveNewValue($event, item, i, 'centerListLate', 'name')">
+        </div>
+
+        
+
+        <div class="price">
+            <span class="price__item" *ngFor="let price of item.price; let i = index;" [style.height.px]="lineHeight" [style.width.px]="lineHeight">
+              <span class="price__item-wrapper">
+                <input type="text" value="{{ price }}" [style.height.px]="lineHeight" [style.width.px]="lineHeight" (change)="saveNewValue($event, item, i, 'centerListLate')">
+              </span>
+            </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Right side -->
+
+  <div class="right-side">
+    <div class="right-side__item"
+         [style.width.px]="(winWidth - rightColWidth) * .17"
+         [style.height.px]="rightColWidth"
+         *ngFor="let item of config[Lang].rightListLate">
+      <span class="name" [innerHTML]="item.name"></span>
+      <div class="product-image">
+        <img src="{{ item.image }}" alt="">
+      </div>
+
+      <ul class="price-col">
+        <li class="price-col__item" *ngFor="let price of item.price; let i = index;">
+          <span *ngIf="price" class="price-col__item-wrapper">
+             <input type="text" value="{{ price }}" [style.height.px]="40" [style.width.px]="40" (change)="saveNewValue($event, item, i, 'rightListLate')">
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>

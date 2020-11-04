@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="200" viewBox="0 0 417 391" id="Coffee" version="1.1">
+  <g class="coffee-cup" transform="translate(85, -220) scale(1.9)">
+    <use class="cup-smoke_middle" xlink:href="#smoke" transform="translate(62 38) scale(-1 1) translate(-79 -48)"></use>
+    <use xlink:href="#Cup"></use>
+  </g>
+</svg>
