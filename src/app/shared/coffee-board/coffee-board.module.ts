@@ -4,6 +4,7 @@ import { CoffeeBoardComponent } from './coffee-board.component';
 import { CoffeeBoardListHeaderComponent } from './components/coffee-board-list-header/coffee-board-list-header.component';
 import { CoffeeBoardListComponent } from './components/coffee-board-list/coffee-board-list.component';
 import { CoffeeBoardBgComponent } from './components/coffee-board-bg/coffee-board-bg.component';
+import { CoffeeBoardSettingsComponent } from './components/coffee-board-settings/coffee-board-settings.component';
 
 @NgModule({
   imports: [ CommonModule ],
@@ -12,6 +13,7 @@ import { CoffeeBoardBgComponent } from './components/coffee-board-bg/coffee-boar
     CoffeeBoardListHeaderComponent,
     CoffeeBoardListComponent,
     CoffeeBoardBgComponent,
+    CoffeeBoardSettingsComponent,
   ],
   exports: [
     CommonModule,
@@ -19,6 +21,7 @@ import { CoffeeBoardBgComponent } from './components/coffee-board-bg/coffee-boar
     CoffeeBoardListHeaderComponent,
     CoffeeBoardListComponent,
     CoffeeBoardBgComponent,
+    CoffeeBoardSettingsComponent,
   ],
 })
 export class CoffeeBoardModule { }

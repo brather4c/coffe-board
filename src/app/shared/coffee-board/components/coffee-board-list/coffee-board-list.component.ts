@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { CoffeeItem } from "../../coffee-config";
 import { BoardService } from '../../services/board.service';
 
 @Component({
@@ -14,28 +13,6 @@ export class CoffeeBoardListComponent {
 
   constructor(public boardS: BoardService) {}
 
-  saveNewValue(e: Event, selectedItem: CoffeeItem , priceIndex?: number, fildName?: string) {
-
-    let arr: any = JSON.parse(localStorage.getItem('config'));
-
-    arr[this.boardS.language][this.listType].map((item) => {
-      if (item.id === selectedItem.id) {
-        if (priceIndex || priceIndex !== null) {
-          item.price[priceIndex] = (e.target as HTMLInputElement).value;
-        }
-
-        if (fildName && fildName == 'name') {
-          item.name = (e.target as HTMLInputElement).value;
-        }
-      }
-    });
-    console.log(arr);
-    this.boardS.config = arr;
-    localStorage.setItem('config', JSON.stringify(this.boardS.config));
-  }
-
-  selectField(e) {
-
-  }
+  selectField(e) {}
 
 }

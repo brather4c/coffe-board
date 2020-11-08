@@ -12,6 +12,7 @@ declare var mina: any;
 export class CoffeeBoardListHeaderComponent implements OnInit {
   @Input() lineHeight: number;
   @Input() title: string;
+
   smoke: any;
   constructor() { }
 

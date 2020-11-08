@@ -9,7 +9,7 @@
              [disabled]="!boardS.editMod"
              [style.height.px]="lineHeight"
              [style.width.px]="field.clientWidth - (lineHeight * 4) - 6"
-             (change)="saveNewValue($event, item, null, 'name')"
+             (change)="boardS.saveNewValue($event, item, listType, null, 'name')"
              (click)="selectField($event)">
     </div>
 
@@ -24,7 +24,7 @@
                   [disabled]="!boardS.editMod"
                   [style.height.px]="lineHeight"
                   [style.width.px]="lineHeight"
-                  (change)="saveNewValue($event, item, i)"
+                  (change)="boardS.saveNewValue($event, item, listType, i)"
                   (click)="selectField($event)">
         </span>
       </span>

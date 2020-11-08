@@ -132,7 +132,7 @@ export const CoffeeList = {
   /* 
       You can bild native language Sheme:
       - 'Aditional Language' - chanhe on 'Lang 1' or 'Leng 2', and
-        change standart Sheme name (like '!!! Lang 1' or '?#G Lang 1');
+        change standart Sheme name (like 'My language' or '?#G Lang 1');
       
       - change langName 'Language Type' --> like ENG, UKR, CAN, CHI
 
