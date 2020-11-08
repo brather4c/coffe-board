@@ -11,18 +11,6 @@ export class BgComponent implements OnInit {
 
   ngOnInit() {
 
-    /*
-
-By: @everblind
-
-Use it!, for FREE ;D
-Help?, Questions?, Message me!
-Do you want to use the Mouse?, Fork it and make your mod!
-
-Cheers :)
-
-*/
-
     var canvas;
     var context;
     var width;

@@ -1,0 +1,105 @@
+
+.bord-list-header {
+  position: absolute;
+  width: 100%; height: 100px;
+
+  & > h3 {
+    position: absolute;
+    left: 60px; bottom: 10px;
+
+    color: #fff;
+    text-shadow: 2px 2px rgba(0,0,0,.75);
+    font-size: 40px;
+  }
+
+  .cap-line {
+    position: absolute;
+    right: 0; bottom: 0;
+
+    &__item {
+      position: relative;
+      display: inline-block;
+      width: 40px; height: inherit;
+
+      border-right: 2px solid rgba(255,255,255,.75);
+
+      &:first-child {
+        border-left: 2px solid rgba(255,255,255,.75);
+      }
+
+      &-wrapper {
+        display: block;
+        width: auto; height: auto;
+        position: absolute;
+        top: 50%; left: 50%;
+
+        font-size: 20px;
+        color: #fff;
+        font-weight: 600;
+        text-shadow: 1px 1px #000;
+
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+
+.cap {
+  display: block;
+  width: 100%; height: 100%;
+
+  &-size {
+    display: inline-block;
+    width: 100%; height: auto;
+    position: absolute;
+    top: 50%; left: 50%;
+
+    color: #FFF;
+    text-shadow: 1px 1px #666;
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+
+    transform-origin: left top;
+    transform: translate(-50%, -50%) rotate(-7deg);
+  }
+
+  &_small {
+
+    img {
+      width: 38px;
+    }
+
+    .cap-size {
+      top: 51%; left: 48%;
+      font-size: 12px;
+    }
+  }
+
+  &_midle {
+    padding-bottom: 14px;
+
+    img {
+      width: 46px;
+    }
+
+    .cap-size {
+      top: 49%; left: 49%;
+      font-size: 15px;
+    }
+  }
+
+  &_large {
+    padding-bottom: 22px;
+
+    img {
+      width: 58px;
+    }
+
+    .cap-size {
+      font-size: 19px;
+      top: 46%;
+    }
+  }
+}

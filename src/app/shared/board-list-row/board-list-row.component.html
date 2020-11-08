@@ -1,0 +1,32 @@
+<ul class="bord-list">
+  <li class="bord-list__item"
+      *ngFor="let item of list;"
+      [style.height.px]="lineHeight"
+      #field>
+    <div class="name">
+      <input [disabled]="!boardS.editMod"
+             type="text"
+             value="{{ item.name }}"
+             [style.height.px]="lineHeight"
+             [style.width.px]="field.clientWidth - (lineHeight * 4) - 6"
+             (change)="saveNewValue($event, item, null, 'name')"
+             (click)="selectField($event)">
+    </div>
+    <div class="price">
+          <span class="price__item"
+                *ngFor="let price of item.price; let i = index;"
+                [style.height.px]="lineHeight"
+                [style.width.px]="lineHeight">
+            <span class="price__item-wrapper">
+               <input [disabled]="!boardS.editMod"
+                      type="text"
+                      value="{{ price }}"
+                      [style.height.px]="lineHeight"
+                      [style.width.px]="lineHeight"
+                      (change)="saveNewValue($event, item, i)"
+                      (click)="selectField($event)">
+            </span>
+          </span>
+    </div>
+  </li>
+</ul>
