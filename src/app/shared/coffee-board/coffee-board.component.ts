@@ -7,7 +7,6 @@ import {
   AfterViewInit
 } from '@angular/core';
 import { BoardService } from './services/board.service';
-import {CoffeeItem} from './coffee-config';
 
 @Component({
   selector: 'coffee-board',
@@ -27,9 +26,7 @@ export class CoffeeBoardComponent implements OnInit, AfterViewInit {
     this.rightColWidth = (this.winHeight * .95) / 4;
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     const leftListRowCount = this.boardS.config[this.boardS.language].leftSideList.length;

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BoardService } from '../../services/board.service';
 
 @Component({
@@ -9,11 +9,10 @@ import { BoardService } from '../../services/board.service';
 
 export class CoffeeBoardSettingsComponent implements OnInit {
   public showSettings: boolean;
+
   constructor(public boardS: BoardService) { }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   toggleSettings() {
     this.showSettings = !this.showSettings;

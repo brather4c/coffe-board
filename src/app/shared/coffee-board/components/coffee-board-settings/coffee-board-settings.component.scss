@@ -1,5 +1,3 @@
-/* SETTINGS */
-
 .settings {
   width: 30px; height: 30px;
   position: absolute;
@@ -57,6 +55,12 @@
       margin-top: 10px;
       .to-center {
         width: 100%; height: 40px;
+      }
+
+      &_border {
+        margin-top: 10px;
+        padding-top: 20px;
+        border-top: 1px solid #e1e1e1;
       }
     }
 

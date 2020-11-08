@@ -1,5 +1,7 @@
 <div class="settings">
-  <div class="settings__button" [ngClass]="{'settings__button_open': showSettings}" (click)="toggleSettings()">
+  <div class="settings__button"
+       [ngClass]="{'settings__button_open': showSettings}"
+       (click)="toggleSettings()">
     <img *ngIf="!showSettings" src="assets/icon/settings.svg" alt="">
     <img *ngIf="showSettings" src="assets/icon/close.svg" alt="">
   </div>
@@ -9,7 +11,8 @@
       <span>
             <div class="switch">
               <input type="checkbox" name="toggle" id="toggle"
-                     [checked]="boardS.staticBg" (change)="boardS.staticBg = !boardS.staticBg">
+                     [checked]="!boardS.staticBg"
+                     (change)="boardS.staticBg = !boardS.staticBg">
               <label for="toggle"><i></i></label>
             </div>
         </span>
@@ -20,16 +23,15 @@
       <span>
             <div class="switch">
               <input type="checkbox"
-                     [checked]="(boardS.language != 'Lang 1') ? true : false"
                      name="LANG"
+                     [checked]="(boardS.language != 'Lang 1') ? true : false"
                      (change)="boardS.changeLanguage($event)">
               <label [for]="boardS.language"><i></i></label>
             </div>
           </span>
       <span>Lang 2 (UKR)</span>
     </div>
-    <div class="settings__body-line"
-         style="margin-top: 10px; border-top: 1px solid #e1e1e1; padding-top: 20px;">
+    <div class="settings__body-line settings__body-line_border">
       <span>Edit Mod</span>
       <span>
           <div class="switch">

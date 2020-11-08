@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {CoffeeItem, CoffeeList} from "../coffee-config";
+import { CoffeeList } from "../coffee-config";
+import { CoffeeBoardItem } from "../models/board.model";
 
 @Injectable({
   providedIn: 'root',
@@ -39,7 +40,7 @@ export class BoardService {
     if (e) setTimeout(()=> e.target.checked = false , 1000);
   }
 
-  saveNewValue(e: Event, selectedItem: CoffeeItem , listType, priceIndex: number, fildName?: string) {
+  saveNewValue(e: Event, selectedItem: CoffeeBoardItem , listType, priceIndex: number, fildName?: string) {
 
     let arr: any = JSON.parse(localStorage.getItem('config'));
 

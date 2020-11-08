@@ -205,10 +205,3 @@ export const CoffeeList = {
     ]
   }
 };
-
-export interface CoffeeItem {
-  name: string;
-  price: Array<string>;
-  id: string;
-  image?: string;
-}
