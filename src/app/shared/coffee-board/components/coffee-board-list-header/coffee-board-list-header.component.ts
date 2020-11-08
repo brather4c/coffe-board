@@ -1,14 +1,15 @@
-import {Component, OnInit, Input, ViewChild, ElementRef} from '@angular/core';
+import {Component, OnInit, Input } from '@angular/core';
 
 declare var Snap: any;
 declare var mina: any;
 
 @Component({
-  selector: 'board-list-header',
-  templateUrl: './board-list-header.component.html',
-  styleUrls: ['./board-list-header.component.scss']
+  selector: 'coffee-board-list-header',
+  templateUrl: './coffee-board-list-header.component.html',
+  styleUrls: ['./coffee-board-list-header.component.scss']
 })
-export class BoardListHeaderComponent implements OnInit {
+
+export class CoffeeBoardListHeaderComponent implements OnInit {
   @Input() lineHeight: number;
   @Input() title: string;
   smoke: any;

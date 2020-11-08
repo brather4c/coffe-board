@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bg',
-  templateUrl: './bg.component.html',
-  styleUrls: ['./bg.component.css']
+  selector: 'coffee-board-bg',
+  templateUrl: './coffee-board-bg.component.html',
+  styleUrls: ['./coffee-board-bg.component.scss']
 })
-export class BgComponent implements OnInit {
+
+export class CoffeeBoardBgComponent implements OnInit {
 
   constructor() { }
 

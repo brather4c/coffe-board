@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {CoffeeList} from "../../assets/coffee-config";
+import {CoffeeList} from "../coffee-config";
 
 @Injectable({
   providedIn: 'root',

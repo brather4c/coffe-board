@@ -1,23 +1,18 @@
-import {Component, OnInit, Input, ViewChild, ElementRef} from '@angular/core';
-import {CoffeeItem} from "../../../assets/coffee-config";
+import { Component, Input } from '@angular/core';
+import { CoffeeItem } from "../../coffee-config";
 import { BoardService } from '../../services/board.service';
+
 @Component({
-  selector: 'board-list-row',
-  templateUrl: './board-list-row.component.html',
-  styleUrls: ['./board-list-row.component.scss']
+  selector: 'coffee-board-list',
+  templateUrl: './coffee-board-list.component.html',
+  styleUrls: ['./coffee-board-list.component.scss']
 })
-export class BoardListRowComponent implements OnInit {
+export class CoffeeBoardListComponent {
   @Input() lineHeight: number;
   @Input() listType: string;
   @Input() list: any;
 
-  constructor(public boardS: BoardService) {
-
-  }
-
-  ngOnInit() {
-
-  }
+  constructor(public boardS: BoardService) {}
 
   saveNewValue(e: Event, selectedItem: CoffeeItem , priceIndex?: number, fildName?: string) {
 
