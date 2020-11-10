@@ -181,25 +181,25 @@ export const CoffeeList = {
       {
         name: 'Мокачіно',
         price: [null, 23, 28, 33],
-        image: 'assets/images/cap_of_coffee.svg',
+        image: 'assets/coffee-board/images/cap_of_coffee.svg',
         id: 'rll001'
       },
       {
         name: 'Какаошейк',
         price: [null, null, 27, 33],
-        image: 'assets/images/cap_of_coffee.svg',
+        image: 'assets/coffee-board/images/cap_of_coffee.svg',
         id: 'rll002'
       },
       {
         name: 'Мілкшейк',
         price: [null, null, 24, 29],
-        image: 'assets/images/cap_of_coffee.svg',
+        image: 'assets/coffee-board/images/cap_of_coffee.svg',
         id: 'rll003'
       },
       {
         name: 'Мілкшейк',
         price: [null, 18, 24, 29],
-        image: 'assets/images/cap_of_coffee.svg',
+        image: 'assets/coffee-board/images/cap_of_coffee.svg',
         id: 'rll004'
       }
     ]

@@ -37,7 +37,7 @@ export class CoffeeBoardListHeaderComponent implements OnInit {
     setTimeout(() => {
       this.resetAnimation();
       this.animateSmokeInverted();
-    }, 2000);
+    }, totalAnimationDuration);
 
     cancelAnimationFrame(animationFrame);
   }
@@ -45,7 +45,7 @@ export class CoffeeBoardListHeaderComponent implements OnInit {
   resetAnimation() {
       this.smoke.attr({
         opacity: 1,
-        transform: '0,0,1t-79,-48t-30, 120'
+        transform: '0,0'
       });
   }
 

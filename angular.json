@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "coffee-bord"
+  "defaultProject": "coffee-bord",
+  "cli": {
+    "analytics": "f4f16c67-6c29-4770-8c63-e0759d5d9af5"
+  }
 }

@@ -2,8 +2,8 @@
   <div class="settings__button"
        [ngClass]="{'settings__button_open': showSettings}"
        (click)="toggleSettings()">
-    <img *ngIf="!showSettings" src="assets/icon/settings.svg" alt="">
-    <img *ngIf="showSettings" src="assets/icon/close.svg" alt="">
+    <img *ngIf="!showSettings" src="../../../../../assets/coffee-board/icon/settings.svg" alt="">
+    <img *ngIf="showSettings" src="../../../../../assets/coffee-board/icon/close.svg" alt="">
   </div>
   <div *ngIf="showSettings" class="settings__body">
     <div class="settings__body-line">
