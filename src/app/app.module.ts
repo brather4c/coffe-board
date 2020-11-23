@@ -8,20 +8,7 @@ import {
 } from 'angularx-social-login';
 
 // // Configs
-// export function getAuthServiceConfigs() {
-//   let config = new AuthServiceConfig(
-//     [
-//       // {
-//       //     id: FacebookLoginProvider.PROVIDER_ID,
-//       //     provider: new FacebookLoginProvider('554719735070210')
-//       // },
-//       {
-//         id: GoogleLoginProvider.PROVIDER_ID,
-//         provider: new GoogleLoginProvider('172160485875-3kdop1f47ekn6ue98kbru0dgss92muh2.apps.googleusercontent.com')
-//       }
-//     ]
-//   );
-//
+
 //   return config;
 // }
 
