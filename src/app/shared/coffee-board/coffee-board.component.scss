@@ -5,6 +5,7 @@
   position: relative;
   overflow: hidden;
   background: url("/assets/coffee-board/images/bg.jpg") center no-repeat;
+  background-size: 100% 100%;
 
   &::ng-deep {
 
@@ -96,9 +97,10 @@ header {
 }
 
 .right-side {
-  height: 100%;
+  height: auto;
   position: absolute;
-  right: 0; top: 0;
+  right: 0;
+  bottom: 0;
 
   &__item {
     position: relative;
@@ -155,7 +157,7 @@ header {
   list-style: none;
 
   &__item {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 
     span {
       display: block;

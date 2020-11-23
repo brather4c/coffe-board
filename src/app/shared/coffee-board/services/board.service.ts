@@ -6,6 +6,7 @@ import { CoffeeBoardItem } from "../models/board.model";
   providedIn: 'root',
 })
 export class BoardService {
+
   language = (localStorage.getItem('Lang') == null) ? 'Lang 1' : localStorage.getItem('Lang');
   config: any;
   editMod = true;

@@ -18,7 +18,7 @@ export class CoffeeBoardListHeaderComponent implements OnInit {
 
   ngOnInit() {
     this.smoke = Snap.select('#smoke');
-    this.animateSmokeInverted();
+    // this.animateSmokeInverted();
   }
 
   animateSmokeInverted() {

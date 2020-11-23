@@ -4,17 +4,15 @@
 <!-- Logo -->
 
 <div class="logo">
-
-  <div class="logo-wrapp"
-       [ngClass]="{'loaded': logoLoaded }">
+  <div class="logo-wrapp" [ngClass]="{'loaded': logoLoaded }">
     <label class="logo-wrapp__file-label"
            for="filesLogo">LOGO 200x80</label>
     <input type="file"
            id="filesLogo"
            class="logo-wrapp__file-input"
-           (change)="uploadImage($event, uploadLogoImg, linkDownload)"/>
+           (change)="uploadImage($event, uploadLogoImg)"/>
     <img id="image" #uploadLogoImg/>
-    <a href="" #linkDownload></a>
+<!--    <a href="" #linkDownload></a>-->
   </div>
 
   <!-- Settings  -->
@@ -61,7 +59,7 @@
          *ngFor="let item of boardS.config[boardS.language].rightListLate">
       <span class="name" [innerHTML]="item.name"></span>
       <div class="product-image">
-        <img src="{{ item.image }}" alt="">
+        <img [src]="item.image" alt="">
       </div>
 
       <ul class="price-col">

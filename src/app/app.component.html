@@ -1,1 +1,23 @@
+
+<div class="social-login"
+     (click)="signInWithGoogle()">
+  <img *ngIf="loggedIn"
+       class="social-login__user-icon"
+       [src]="user.photoUrl" alt="">
+
+  <ul *ngIf="loggedIn"
+      class="social-login__list">
+    <li class="social-login__list-item social-login__user-settings">User settings</li>
+    <li class="social-login__list-item social-login__logout" (click)="signOut()">Log out</li>
+  </ul>
+</div>
+
+
+<!-- Page content-->
+
 <coffee-board></coffee-board>
+
+
+
+
+
