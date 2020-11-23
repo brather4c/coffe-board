@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  googleClientId: '',
   firebase: {
     apiKey: "AIzaSyAAicPDB2Y6ysTuT4SCIr89wXqsduLxOt4",
     authDomain: "testspace-2e5ec.firebaseapp.com",
