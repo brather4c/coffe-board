@@ -6,11 +6,7 @@ import {
   GoogleLoginProvider,
   FacebookLoginProvider
 } from 'angularx-social-login';
-
-// // Configs
-
-//   return config;
-// }
+import { environment } from '../environments/environment';
 
 import { CoffeeBoardModule } from './shared/coffee-board/coffee-board.module';
 
@@ -27,9 +23,16 @@ import { CoffeeBoardModule } from './shared/coffee-board/coffee-board.module';
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {
-        autoLogin: true,
+        autoLogin: false,
         providers: [
-
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(environment.googleClientId)
+          },
+          // {
+          //   id: FacebookLoginProvider.PROVIDER_ID,
+          //   provider: new FacebookLoginProvider('clientId')
+          // }
         ]
       } as SocialAuthServiceConfig,
     }
